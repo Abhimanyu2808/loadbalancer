@@ -2,7 +2,7 @@ provider "aws" {
    region = "ap-south-1"
 }
   
-  module "autoscaling-asg" {
+  module "asg" {
     source = "./modules/autoscaling"
     image_id = var.image_id
     instance_type = var.instance_type
@@ -24,7 +24,7 @@ provider "aws" {
     security_group_id = var.security_group_id
     subnet_ids =var.subnet_ids
     vpc_id = var.vpc_id
-    autoscaling_group_name_home = module.autoscaling-asg.asg_home_name
-    autoscaling_group_name_laptop = module.autoscaling-asg.asg_laptop_name
-    autoscaling_group_name_mobile = module.autoscaling-asg.asg_mobile_name
+    autoscaling_group_name_home = module.asg.asg_home_name
+    autoscaling_group_name_laptop = module.asg.asg_laptop_name
+    autoscaling_group_name_mobile = module.asg.asg_mobile_name
 }
