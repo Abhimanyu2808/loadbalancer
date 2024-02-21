@@ -24,7 +24,7 @@ provider "aws" {
     security_group_id = var.security_group_id
     subnet_ids =var.subnet_ids
     vpc_id = var.vpc_id
-    autoscaling_group_name_home = module.asg.asg_home_name
-    autoscaling_group_name_laptop = module.asg.asg_laptop_name
-    autoscaling_group_name_mobile = module.asg.asg_mobile_name
+    autoscaling_group_name_home = module.asg.as-home-group-name
+    autoscaling_group_name_laptop = module.asg.as-laptop-group-name
+    autoscaling_group_name_mobile = module.asg.as-mobile-group-name
 }
